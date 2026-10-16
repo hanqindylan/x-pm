@@ -1,0 +1,47 @@
+{
+  "name": "x-pm",
+  "version": "0.1.0",
+  "description": "一个命令，统一 npm / pnpm / bun / yarn",
+  "type": "module",
+  "bin": {
+    "x": "./dist/index.js",
+    "xgo": "./dist/index.js"
+  },
+  "engines": {
+    "node": ">=18.18.0"
+  },
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "build": "tsup",
+    "prepare": "npm run build",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "tsc --noEmit"
+  },
+  "author": "hanqindylan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hanqindylan/x-pm.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hanqindylan/x-pm/issues"
+  },
+  "dependencies": {
+    "cac": "^6.7.14",
+    "execa": "^9.5.2",
+    "find-up": "^7.0.0",
+    "picocolors": "^1.1.1",
+    "prompts": "^2.4.2",
+    "which": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/prompts": "^2.4.9",
+    "@types/which": "^3.0.4",
+    "tsup": "^8.3.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}
